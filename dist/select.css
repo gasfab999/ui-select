@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.7 - 2017-04-15T14:28:36.790Z
+ * Version: 0.19.8 - 2020-01-30T17:51:30.727Z
  * License: MIT
  */
 
@@ -359,4 +359,11 @@ body > .ui-select-bootstrap.open {
 
 .ui-select-refreshing.ng-animate {
   -webkit-animation: none 0s;
+}
+
+.ui-select-search-wrapper {
+  display: block;
+  margin: 0;
+  cursor: text;
+  font-weight: normal;
 }
