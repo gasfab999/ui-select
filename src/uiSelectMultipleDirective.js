@@ -34,8 +34,23 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
         }
       };
 
+      // Select item and focus input
+      ctrl.setActiveMatch = function(index, event) {
+        if (event) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        ctrl.activeMatchIndex = index;
+        $select.focusSearchInput();
+      };
+
       // Remove item from multiple select
-      ctrl.removeChoice = function(index){
+      ctrl.removeChoice = function(index, event){
+        if (event) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
 
         // if the choice is locked, don't remove it
         if($select.isLocked(null, index)) return false;

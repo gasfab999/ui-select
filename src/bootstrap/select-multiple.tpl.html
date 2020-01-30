@@ -1,5 +1,5 @@
 <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control" ng-class="{open: $select.open}">
-  <div>
+  <label class="ui-select-search-wrapper">
     <div class="ui-select-match"></div>
     <input type="search"
            autocomplete="off"
@@ -16,7 +16,7 @@
            aria-label="{{$select.baseTitle}}"
            ng-class="{'spinner': $select.refreshing}"
            ondrop="return false;">
-  </div>
+  </label>
   <div class="ui-select-choices"></div>
   <div class="ui-select-no-choice"></div>
 </div>
