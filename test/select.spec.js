@@ -2027,7 +2027,7 @@ describe('ui-select tests', function () {
 
       $timeout.flush();
 
-      var newWidth = searchInput[0].clientWidth + searchInput[0].offsetLeft;
+      var newWidth = searchInput[0].clientWidth + searchInput[0].offsetLeft + 10;
       var containerWidth = el[0].clientWidth;
       expect(containerWidth - newWidth).toBeLessThan(10);
 

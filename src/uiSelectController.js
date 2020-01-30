@@ -534,8 +534,9 @@ uis.controller('uiSelectCtrl',
           if (containerWidth === 0) {
             return false;
           }
-          var inputWidth = containerWidth - input.offsetLeft;
-          if (inputWidth < 50) inputWidth = containerWidth;
+          // See comment https://github.com/angular-ui/ui-select/issues/1980#issuecomment-312286862
+          var inputWidth = containerWidth - input.offsetLeft - (ctrl.multiple ? 10 : 0);
+          if (inputWidth < 75) inputWidth = containerWidth;
           ctrl.searchInput.css('width', inputWidth+'px');
           return true;
         };
